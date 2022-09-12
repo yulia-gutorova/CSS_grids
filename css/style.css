@@ -1,0 +1,110 @@
+/** Not allowed to change this initial CSS code **/
+body {
+	background: url(../img/12_col.gif) center top repeat-y;
+	background-size: 90%;
+}
+/*************************************************/
+.main_container{
+	display: grid;
+	/* background-color: rgb(161, 161, 243, 0.2); */
+	width: 89%;
+	min-height: 1000px;
+	margin: auto;
+	grid-template-rows: repeat(4, 25%);
+	grid-template-columns: repeat(12, 1fr);
+
+
+	row-gap: 10px ;
+	column-gap: 25px;
+}
+
+.header{
+	/* background-color: aqua; */
+	border: 1px solid black;
+	grid-column-start: 1 ;
+	grid-column-end: 13 ;
+	grid-row-start: 1 ;
+	grid-row-end: 2 ;
+}
+.box1{
+	/* background-color: greenyellow; */
+	border: 1px solid black;
+	grid-column-start: 1 ;
+	grid-column-end: span 2 ;
+	grid-row-start: 2 ;
+	grid-row-end: 3 ;
+}
+
+.box2{
+	/* background-color: green; */
+	border: 1px solid black;
+	grid-column-start: 3 ;
+	grid-column-end: 11 ;
+	grid-row-start: 2 ;
+	grid-row-end: 3 ;
+
+}
+.box3{
+	/* background-color: goldenrod; */
+	border: 1px solid black;
+	grid-column-start: 11 ;
+	grid-column-end: 13 ;
+	grid-row-start: 2 ;
+	grid-row-end: 3 ;
+}
+
+.content{
+	/* background-color: blueviolet; */
+	border: 1px solid black;
+	grid-column-start: 1 ;
+	grid-column-end: 10 ;
+	grid-row-start: 3 ;
+	grid-row-end: 4 ;
+}
+
+.sidebar{
+	/* background-color: rgb(226, 63, 177); */
+	border: 1px solid black;
+	grid-column-start: 10 ;
+	grid-column-end: 13 ;
+	grid-row-start: 3 ;
+	grid-row-end: 4 ;
+}
+
+.footer{
+	/* background-color: orange; */
+	border: 1px solid black;
+	grid-column-start: 1 ;
+	grid-column-end: 13 ;
+	grid-row-start: 4 ;
+	grid-row-end: 5 ;
+
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+	column-gap: 20px;
+	padding: 10px;
+}
+
+.footer_one{
+	/* background-color: rgb(161, 123, 196);  */
+	border: 1px solid black;
+
+}
+
+.footer_two{
+	/* background-color: rgb(224, 202, 245);  */
+	border: 1px solid black;
+}
+
+.footer_three{
+	/* background-color: rgb(26, 17, 34);  */
+	border: 1px solid black;
+}
+
+.footer_four{
+	/* background-color: rgb(26, 17, 34);  */
+	border: 1px solid black;
+}
+
+
