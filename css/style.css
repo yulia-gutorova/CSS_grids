@@ -5,71 +5,72 @@ body {
 }
 /*************************************************/
 .main_container{
+	/* background-color: aqua; */
 	display: grid;
-	/* background-color: rgb(161, 161, 243, 0.2); */
-	width: 89%;
-	min-height: 1000px;
+	width: 90%;
+	min-height: 500px;
 	margin: auto;
 
 	grid-template-rows: repeat(4, 25%);
 	grid-template-columns: repeat(12, 1fr);
 
 	row-gap: 10px ;
-	column-gap: 25px;
+	column-gap: 2%;
 }
 
-.header{
-	/* background-color: aqua; */
+/*--------------------- Common properties --------------------*/
+
+.header, .box1, .box2, .box3, .content, .sidebar, .footer, [class*='footer_']{
 	border: 1px solid black;
+}
+
+/*---------------------- Header sections ---------------------*/
+.header{
 	grid-column: 1 / 13 ;
 	grid-row: 1 / 2;
 }
 
-
-.box1, .box2, .box3, .content, .sidebar, .footer, [class*='footer_']{
-	border: 1px solid black;
-}
+/*---------------------- Box sections ------------------------*/
 
 .box1{
-	/* background-color: greenyellow; */
 	grid-column: 1 / span 2 ;
 	grid-row: 2 / 3;
 }
 
 .box2{
-	/* background-color: green; */
 	grid-column: 3 / 11 ;
 	grid-row: 2 / 3;
 }
 
 .box3{
-	/* background-color: goldenrod; */
 	grid-column: 11 / 13 ;
 	grid-row: 2 / 3;
 }
 
+/*-------------- Content and sidebar section -------------*/
+
 .content{
-	/* background-color: blueviolet; */
 	grid-column: 1 / 10 ;
 	grid-row: 3 / 4;
 }
 
 .sidebar{
-	/* background-color: rgb(226, 63, 177); */
 	grid-column: 10 / 13 ;
 	grid-row: 3 / 4;
 }
 
+/*-------------------- Footer section ----------------*/
+
 .footer{
-	/* background-color: orange; */
+	display: grid;
 	grid-column: 1 / 13 ;
 	grid-row: 4 / 5;
-	display: grid;
     grid-template-columns: repeat(4, 1fr);
+	column-gap: 2%;
+	padding: 8px;
 
-	column-gap: 20px;
-	padding: 10px;
 }
+
 
 
 /*-------------------------------------------------------------
@@ -79,13 +80,12 @@ body {
 /*-------------------------------------------------------------
 /*                         Normal desktops
 --------------------------------------------------------------*/
-@media screen and (max-width: 1880px)
+@media screen and (min-width: 1200px)
 {
         .main_container{
 		 background-color: coral; 
 		opacity: 80%;
-	}
-	
+	}	
 }
 
 
@@ -103,31 +103,28 @@ body {
 	/*---------------------- Box sections --------------------*/
 
 	.box1{
-		/* background-color: greenyellow; */
 		grid-column: 1 / 4;
 	}
-	
+
 	.box2{
-		/* background-color: green; */
+
 		grid-column: 4 / 10;
 	}
 	.box3{
-		/* background-color: goldenrod; */
 		grid-column: 10 / 13;
 	}
-	
+
 	/*-------------- Content and sidebar section -------------*/
 
 	.content{
-		/* background-color: blueviolet; */
 		grid-column: 1 / 9;
 	}
-	
+
 	.sidebar{
-		/* background-color: rgb(226, 63, 177); */
 		grid-column: 9 / 13;
 	}
 }
+
 
 /*-------------------------------------------------------------
 /*                          TABLETS  
@@ -138,48 +135,41 @@ body {
 	.main_container{
 		background-color: green;
 		grid-template-rows: repeat(5, 1fr);
-		column-gap: 20px;
 	}
 
 	/*---------------------- Box sections --------------------*/
 
 	.box1{
-		/* background-color: greenyellow; */
 		grid-column: 1 / 5;
 	}
-	
+
 	.box2{
-		/* background-color: green; */
 		grid-column: 5 / 9;	
 	}
 
 	.box3{
-		/* background-color: goldenrod; */
 		grid-column: 9 / 13;
 	}
 
-		/*-------------- Content and sidebar section -------------*/
+	/*-------------- Content and sidebar section -------------*/
 
 	.content{
-		/* background-color: blueviolet; */
 		grid-column: 1 / 7;
 	}
-	
+
 	.sidebar{
-		/* background-color: rgb(226, 63, 177); */
 		grid-column: 7 / 13;
 	}
 
 	/*-------------------- Footer section ----------------*/
 
 	.footer{
-		/* background-color: orange; */	
 		grid-row: 4 / 6;	
 		grid-template-columns: 1fr 1fr;
-		column-gap: 18px;
+		column-gap: 2%; 
 		row-gap: 10px;
+	
 	}
-
 }
 
 /*-------------------------------------------------------------
@@ -193,26 +183,21 @@ body {
 		background-color: yellow;  
 		opacity: 80%;
 		grid-template-rows: repeat(10, 1fr);
-		row-gap: 10px ;
-		column-gap: 25px;
 	}
 
 	/*---------------------- Box sections --------------------*/
 
 	.box1{
-		/* background-color: greenyellow; */
 		grid-column: 1 / 13 ;
 		grid-row: 2 / 3;
 	}
 
 	.box2{
-		/* background-color: greenyellow; */
 		grid-column: 1 / 13 ;
 		grid-row: 3 / 4;
 	}
 
 	.box3{
-		/* background-color: greenyellow; */
 		grid-column: 1 / 13 ;
 		grid-row: 4 / 5;
 	}
@@ -220,13 +205,11 @@ body {
 	/*-------------- Content and sidebar section -------------*/
 
 	.content{
-		/* background-color: blueviolet; */
 		grid-column: 1 / 13 ;
 		grid-row: 5 / 6;
 	}
-	
+
 	.sidebar{
-		/* background-color: rgb(226, 63, 177); */
 		grid-column: 1 / 13 ;
 		grid-row: 6 / 7;
 	}
@@ -238,6 +221,7 @@ body {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(4, 1fr);	
 		padding: 5px;
+		row-gap: 8px;
 	}
 }
 
