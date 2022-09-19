@@ -72,22 +72,9 @@ body {
 }
 
 
-
 /*-------------------------------------------------------------
 *************************   MEDIA QUERIES  ********************
 --------------------------------------------------------------*/
-
-/*-------------------------------------------------------------
-/*                         Normal desktops
---------------------------------------------------------------*/
-@media screen and (min-width: 1200px)
-{
-        .main_container{
-		 background-color: coral; 
-		opacity: 80%;
-	}	
-}
-
 
 /*-------------------------------------------------------------
 /*                         Small desktops
@@ -95,11 +82,7 @@ body {
 
 @media screen and (max-width: 1200px)
 {
-        .main_container{
-		background-color: skyblue;  
-		opacity: 80%;
-	}
-
+       
 	/*---------------------- Box sections --------------------*/
 
 	.box1{
@@ -132,8 +115,7 @@ body {
 
 @media screen and (max-width: 960px)
 {
-	.main_container{
-		background-color: green;
+	.main_container{		
 		grid-template-rows: repeat(5, 1fr);
 	}
 
@@ -180,8 +162,7 @@ body {
 {
 
 	.main_container{
-		background-color: yellow;  
-		opacity: 80%;
+		min-height: 800px;
 		grid-template-rows: repeat(10, 1fr);
 	}
 
@@ -220,8 +201,8 @@ body {
 		grid-row: 7 / 10;
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(4, 1fr);	
-		padding: 5px;
-		row-gap: 8px;
+		padding: 4px;
+		row-gap: 6px;
 	}
 }
 
